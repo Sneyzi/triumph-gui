@@ -1,0 +1,5 @@
+name: ${name}
+author: TriumphTeam
+main: dev.triumphteam.gui.Main
+version: ${version}
+api-version: '1.21'

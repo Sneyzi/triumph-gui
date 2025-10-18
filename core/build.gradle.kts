@@ -72,4 +72,19 @@ tasks {
         targetCompatibility = JavaVersion.VERSION_1_8.toString()
         options.encoding = "UTF-8"
     }
+
+    withType<ProcessResources> {
+        from(sourceSets.main.get().resources.srcDirs) {
+            filesMatching("plugin.yml") {
+                expand(
+                    mapOf(
+                        "version" to project.version,
+                        "name" to project.name,
+                    )
+                )
+            }
+        }
+
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
 }
