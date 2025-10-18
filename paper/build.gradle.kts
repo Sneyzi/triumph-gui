@@ -2,6 +2,7 @@ plugins {
     `maven-publish`
     signing
     id("com.vanniktech.maven.publish") version "0.34.0"
+    id("com.github.johnrengelman.shadow")
 }
 
 repositories {

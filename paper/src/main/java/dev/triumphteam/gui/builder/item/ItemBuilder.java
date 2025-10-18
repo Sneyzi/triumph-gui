@@ -32,40 +32,40 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Main ItemBuilder
  */
-public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
+public class ItemBuilder extends BaseItemBuilder<ItemBuilder> {
 
     /**
      * Constructor of the item builder
      *
      * @param itemStack The {@link ItemStack} of the item
      */
-    PaperItemBuilder(@NotNull final ItemStack itemStack) {
-        super(itemStack, PaperNameLoreHandler.getInstance());
+    ItemBuilder(@NotNull final ItemStack itemStack) {
+        super(itemStack, BukkitNameLoreHandler.getInstance());
     }
 
     /**
-     * Main method to create {@link PaperItemBuilder}
+     * Main method to create {@link ItemBuilder}
      *
      * @param itemStack The {@link ItemStack} you want to edit
-     * @return A new {@link PaperItemBuilder}
+     * @return A new {@link ItemBuilder}
      */
     @NotNull
     @Contract("_ -> new")
-    public static PaperItemBuilder from(@NotNull final ItemStack itemStack) {
-        return new PaperItemBuilder(itemStack);
+    public static ItemBuilder from(@NotNull final ItemStack itemStack) {
+        return new ItemBuilder(itemStack);
     }
 
 
     /**
-     * Alternative method to create {@link PaperItemBuilder}
+     * Alternative method to create {@link ItemBuilder}
      *
      * @param material The {@link Material} you want to create an item from
-     * @return A new {@link PaperItemBuilder}
+     * @return A new {@link ItemBuilder}
      */
     @NotNull
     @Contract("_ -> new")
-    public static PaperItemBuilder from(@NotNull final Material material) {
-        return new PaperItemBuilder(new ItemStack(material));
+    public static ItemBuilder from(@NotNull final Material material) {
+        return new ItemBuilder(new ItemStack(material));
     }
 
     /**
@@ -77,7 +77,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract(" -> new")
     public static BannerBuilder banner() {
-        return new BannerBuilder(PaperNameLoreHandler.getInstance());
+        return new BannerBuilder(BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -91,7 +91,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract("_ -> new")
     public static BannerBuilder banner(@NotNull final ItemStack itemStack) {
-        return new BannerBuilder(itemStack, PaperNameLoreHandler.getInstance());
+        return new BannerBuilder(itemStack, BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -107,7 +107,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract("_ -> new")
     public static BookBuilder book(@NotNull final ItemStack itemStack) {
-        return new BookBuilder(itemStack, PaperNameLoreHandler.getInstance());
+        return new BookBuilder(itemStack, BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -119,7 +119,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract(" -> new")
     public static FireworkBuilder firework() {
-        return new FireworkBuilder(new ItemStack(Material.FIREWORK_ROCKET), PaperNameLoreHandler.getInstance());
+        return new FireworkBuilder(new ItemStack(Material.FIREWORK_ROCKET), BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -133,7 +133,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract("_ -> new")
     public static FireworkBuilder firework(@NotNull final ItemStack itemStack) {
-        return new FireworkBuilder(itemStack, PaperNameLoreHandler.getInstance());
+        return new FireworkBuilder(itemStack, BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -145,7 +145,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract(" -> new")
     public static MapBuilder map() {
-        return new MapBuilder(PaperNameLoreHandler.getInstance());
+        return new MapBuilder(BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -159,7 +159,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract("_ -> new")
     public static MapBuilder map(@NotNull final ItemStack itemStack) {
-        return new MapBuilder(itemStack, PaperNameLoreHandler.getInstance());
+        return new MapBuilder(itemStack, BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -170,7 +170,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract(" -> new")
     public static SkullBuilder skull() {
-        return new SkullBuilder(PaperNameLoreHandler.getInstance());
+        return new SkullBuilder(BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -183,7 +183,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract("_ -> new")
     public static SkullBuilder skull(@NotNull final ItemStack itemStack) {
-        return new SkullBuilder(itemStack, PaperNameLoreHandler.getInstance());
+        return new SkullBuilder(itemStack, BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -195,7 +195,7 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract(" -> new")
     public static FireworkBuilder star() {
-        return new FireworkBuilder(new ItemStack(Material.FIREWORK_STAR), PaperNameLoreHandler.getInstance());
+        return new FireworkBuilder(new ItemStack(Material.FIREWORK_STAR), BukkitNameLoreHandler.getInstance());
     }
 
     /**
@@ -209,6 +209,6 @@ public class PaperItemBuilder extends BaseItemBuilder<PaperItemBuilder> {
     @NotNull
     @Contract("_ -> new")
     public static FireworkBuilder star(@NotNull final ItemStack itemStack) {
-        return new FireworkBuilder(itemStack, PaperNameLoreHandler.getInstance());
+        return new FireworkBuilder(itemStack, BukkitNameLoreHandler.getInstance());
     }
 }

@@ -32,11 +32,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public final class PaperNameLoreHandler implements NameLoreHandler {
+public final class BukkitNameLoreHandler implements NameLoreHandler {
 
-    private static final PaperNameLoreHandler INSTANCE = new PaperNameLoreHandler();
+    private static final BukkitNameLoreHandler INSTANCE = new BukkitNameLoreHandler();
 
-    public static PaperNameLoreHandler getInstance() {
+    public static BukkitNameLoreHandler getInstance() {
         return INSTANCE;
     }
 
